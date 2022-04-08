@@ -1,6 +1,6 @@
 # PowerShell DSC - Infrastructure as Code. Work-around pain points.
 
-Complementary repository for a post: [https://dev.to/janisveinbergs/achieving-single-command-infrastructure-deployment-using-powershell-dsc-20h5](Achieving single command Infrastructure deployment using PowerShell DSC.)
+Complementary repository for a post: [Achieving single command Infrastructure deployment using PowerShell DSC](https://dev.to/janisveinbergs/achieving-single-command-infrastructure-deployment-using-powershell-dsc-20h5)
 
 Show how to initiate PowerShell DSC configuration with one-single command. Includes configuration of DSC Engine and module dependency installation.
 
