@@ -2,6 +2,9 @@ configuration SampleConfig {
     Import-DscResource -Module PackageManagement -ModuleVersion 1.0.0.1
     Import-DscResource -Module CertificateDsc -ModuleVersion 5.1.0
 
+    $environment = if ($env:USERDOMAIN -ieq "prod.example.com") {"production"} else {"staging"}
+
+
     Node $AllNodes.NodeName {               
         $DNSName = "example.com"
         CertReq SSLCert {
@@ -13,6 +16,12 @@ configuration SampleConfig {
             CertificateTemplate = 'WebServer'
             KeyType             = 'RSA'
             RequestType         = 'CMC'
+        }
+
+        if ($environment -eq "production") {
+            #Call some resources
+        } else {
+            #Call other resources
         }
     } 
 }
